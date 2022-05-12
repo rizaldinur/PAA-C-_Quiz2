@@ -16,6 +16,7 @@ class RiverCrossing:
   def __str__(self):
     return str(self.left) + str(self.right) + ("Left" if not self.boat else "Right")
 
+
   def ChildGenerator (self, prev, parent_map):
     children = []
     if not self.boat:
@@ -62,7 +63,6 @@ class RiverCrossing:
 
 def find_solution(root, isDFS=False):
     '''
-    Find a solution to the River Crossing Problem.
     isDFS: True for DFS, False for BFS
     '''
     visit = [root]
@@ -75,6 +75,21 @@ def find_solution(root, isDFS=False):
         if not RiverCrossing.prev_state(prev, node.left, node.right, node.boat):
             prev.append(node)
         node.ChildGenerator(prev, parent_map)
+
+
+        #Solving Method : BFS / DFS
+        if isDFS:
+            visit = visit + node.children
+        else:
+            visit = node.children + visit
+
+        if sorted(node.right) == ["Carrot", "Goat", "Wolf"]:
+            solution = []
+            while node is not None:
+                solution = [node] + solution
+                node = parent_map[node]
+            return solution
+    return None
 
 
 print("Choose Method:")
