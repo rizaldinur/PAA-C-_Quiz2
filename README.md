@@ -7,4 +7,4 @@ Members:
 * Vicky Thirdian (05111940000211)
 
 #
-https://docs.google.com/document/d/1Gq8JMVNxdb-bo__NXt3SU8crxGDrEibd0_VzlEvvQlM/edit#
+https://docs.google.com/document/d/1Gq8JMVNxdb-bo__NXt3SU8crxGDrEibd0_VzlEvvQlM/edit?usp=sharing
